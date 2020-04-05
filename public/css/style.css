@@ -9,6 +9,7 @@
   --text: #ffffff;
   --body: #fafafa;
   font-size: 16px;
+  font-family: sans-serif;
 }
 
 * {
@@ -33,6 +34,28 @@ header {
 header h1 {
   font-family: "Comic Nue", cursive;
   font-weight: 200;
+}
+
+header p {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #bbdefb;
+}
+
+.note {
+  background: #fff;
+  width: 15rem;
+  margin: 1rem;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  float: left;
+}
+
+.note h1 {
+  font-size: 1.1rem;
+}
+.note p {
+  font-size: 1.1em;
 }
 
 footer {
