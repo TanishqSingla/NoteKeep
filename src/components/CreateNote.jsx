@@ -18,6 +18,10 @@ const CreateNote = (props) => {
 
   const submitNote = (event) => {
     props.onAdd(note);
+    setNote({
+      title: "",
+      content: "",
+    });
     event.preventDefault();
   };
 
@@ -35,6 +39,7 @@ const CreateNote = (props) => {
           name="content"
           value={note.content}
           placeholder="Take a note..."
+          onChange={handleChange}
         />
         <button onClick={submitNote}>+</button>
       </form>
