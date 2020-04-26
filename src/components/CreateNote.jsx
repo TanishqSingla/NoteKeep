@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const CreateNote = () => {
+const CreateNote = (props) => {
   const [note, setNote] = useState({
     title: "",
     content: "",
@@ -14,6 +14,11 @@ const CreateNote = () => {
         [name]: value,
       };
     });
+  };
+
+  const submitNote = (event) => {
+    props.onAdd(note);
+    event.preventDefault();
   };
 
   return (
@@ -31,7 +36,7 @@ const CreateNote = () => {
           value={note.content}
           placeholder="Take a note..."
         />
-        <button>+</button>
+        <button onClick={submitNote}>+</button>
       </form>
     </div>
   );

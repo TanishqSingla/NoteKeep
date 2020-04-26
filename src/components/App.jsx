@@ -6,10 +6,12 @@ import notes from "../notes";
 import CreateNote from "./CreateNote";
 
 function App() {
+  const addNote = (note) => {};
+
   return (
     <div className="App">
       <Header />
-      <CreateNote />
+      <CreateNote onAdd={addNote} />
       {notes.map((note) => (
         <Note key={note.id} title={note.title} content={note.content} />
       ))}
