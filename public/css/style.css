@@ -43,19 +43,38 @@ header p {
 }
 
 .note {
+  position: relative;
   background: #fff;
   width: 15rem;
   margin: 1rem;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
   float: left;
+  border-radius: 7px;
 }
 
 .note h1 {
   font-size: 1.1rem;
+  margin-bottom: 6px;
 }
 .note p {
   font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  background: none;
+  color: var(--primary);
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
 }
 
 form {
