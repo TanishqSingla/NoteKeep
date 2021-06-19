@@ -1,11 +1,14 @@
-import React, { ChangeEventHandler, MouseEventHandler, useState } from "react";
+import React, { useState } from "react";
 import { Notes } from "./App";
+import AddIcon from '@material-ui/icons/Add'
 
 interface createNoteProps {
-  onAdd: (note: Notes) => void; 
+  onAdd: (note: Notes) => void;
 }
 
-type onChangeHandler = React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+type onChangeHandler = React.ChangeEvent<
+  HTMLInputElement | HTMLTextAreaElement
+>;
 
 const CreateNote: React.FC<createNoteProps> = (props) => {
   const [note, setNote] = useState({
@@ -48,7 +51,7 @@ const CreateNote: React.FC<createNoteProps> = (props) => {
           placeholder="Take a note..."
           onChange={handleChange}
         />
-        <button onClick={submitNote}>+</button>
+        <button onClick={submitNote}><AddIcon /></button>
       </form>
     </div>
   );
