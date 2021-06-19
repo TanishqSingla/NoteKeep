@@ -4,10 +4,15 @@ import Footer from "./Footer";
 import Note from "./Note";
 import CreateNote from "./CreateNote";
 
+export interface note {
+  title: string,
+  contents: string
+}
+
 const App: React.FC = () => {
   const [notes, setNotes] = useState([]);
 
-  const addNote = (newNote) => {
+  const addNote = (newNote: note) => {
     setNotes((prevNotes) => {
       return [...prevNotes, newNote];
     });
