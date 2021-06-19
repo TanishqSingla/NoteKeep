@@ -1,6 +1,12 @@
 import React from "react";
+import { Notes } from "./App";
 
-function Note(props) {
+interface NoteProps {
+  id: number; 
+  onDelete: (id: number) => void
+}
+
+const Note: React.FC<Notes & NoteProps> = (props) => {
   const handleClick = () => {
     props.onDelete(props.id);
   };

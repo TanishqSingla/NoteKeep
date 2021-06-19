@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { ChangeEventHandler, MouseEventHandler, useState } from "react";
+import { Notes } from "./App";
 
-const CreateNote = (props) => {
+interface createNoteProps {
+  onAdd: (note: Notes) => void; 
+}
+
+type onChangeHandler = React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+
+const CreateNote: React.FC<createNoteProps> = (props) => {
   const [note, setNote] = useState({
     title: "",
     content: "",
   });
 
-  const handleChange = (event) => {
+  const handleChange = (event: onChangeHandler) => {
     const { name, value } = event.target;
     setNote((prevNote) => {
       return {
@@ -16,7 +23,7 @@ const CreateNote = (props) => {
     });
   };
 
-  const submitNote = (event) => {
+  const submitNote = (event: React.MouseEvent<HTMLButtonElement>) => {
     props.onAdd(note);
     setNote({
       title: "",
