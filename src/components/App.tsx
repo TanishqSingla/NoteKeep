@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Note from "./Note";
 import CreateNote from "./CreateNote";
 
-function App() {
+const App: React.FC = () => {
   const [notes, setNotes] = useState([]);
 
   const addNote = (newNote) => {
