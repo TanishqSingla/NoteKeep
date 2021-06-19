@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Notes } from "./App";
 import AddIcon from '@material-ui/icons/Add'
-
 interface createNoteProps {
   onAdd: (note: Notes) => void;
 }
