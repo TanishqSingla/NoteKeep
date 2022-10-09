@@ -2,36 +2,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
 
 :root {
-  --dark-primary: #1976d2;
-  --primary: #2196f3;
-  --primary-text: #212121;
-  --accent: #03a9f4;
-  --text: #ffffff;
-  --body: #fafafa;
-  font-size: 16px;
-  font-family: sans-serif;
+	--dark-primary: #1976d2;
+	--primary: #2196f3;
+	--primary-text: #212121;
+	--accent: #03a9f4;
+	--text: #ffffff;
+	--body: #fafafa;
+	font-family: sans-serif;
 }
 
-* {
-  padding: 0;
-  margin: 0;
+html {
+	height: 100%;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  background: var(--body);
+	padding: 0;
+	margin: 0;
+	background: var(--body);
+	height: 100%;
 }
-
-
-footer {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  bottom: 0;
+#root {
+	height: 100%;
 }
-
-footer p {
-  color: #d3d3d3;
-  height: 2.5rem;
+.App {
+	display: flex;
+	flex-flow: column;
+	min-height: 100%;
+}
+main {
+	display: flex;
+	flex-flow: column;
+}
+.notesDisplay {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px 8px;
 }

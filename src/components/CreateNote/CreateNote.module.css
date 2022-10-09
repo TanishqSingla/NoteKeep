@@ -1,19 +1,24 @@
 .CreateForm {
   position: relative;
-  margin: 30px auto 20px auto;
-  padding: 15px;
+  display: flex;
+  flex-flow: column;
+  margin: 2rem auto;
+  padding: 1.5rem;
   width: 480px;
   border-radius: 7px;
   box-shadow: 0 1px 5px #8a8989;
 }
 
-.TitleInput{
-  width: 100%;
-  outline: none;
+.TitleInput {
+  background: transparent;
   border: none;
   font-size: 1.2em;
   resize: none;
   padding: 4px;
+}
+.TitleInput:focus {
+  outline: none;
+  border-bottom: solid var(--primary) 1px;
 }
 
 .AddNoteButton {
@@ -28,7 +33,6 @@
   bottom: -18px;
   right: 18px;
   cursor: pointer;
-  outline: none;
   font-size: 1.2rem;
   background: #222;
 }

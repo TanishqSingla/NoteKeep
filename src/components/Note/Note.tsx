@@ -1,25 +1,25 @@
-import { Notes } from "../App";
+import { Note } from "../App";
 import style from "./Note.module.css";
 
-interface NoteProps {
+interface NoteProps extends Note {
 	id: number;
 	onDelete: (id: number) => void;
 }
 
-const Note: React.FC<Notes & NoteProps> = (props) => {
+export default function (props: NoteProps) {
 	const handleClick = () => {
 		props.onDelete(props.id);
 	};
 
 	return (
 		<div className={style.Note}>
-			<h1 className={style.Title}>{props.title}</h1>
+			{props.title && <div className={style.Title}>{props.title}</div>}
 			<p className={style.Content}>{props.content}</p>
-			<button className={style.Actions} onClick={handleClick}>
-				DELETE
-			</button>
+			<div className={style.Footer}>
+				<button className={style.Button} onClick={handleClick}>
+					DELETE
+				</button>
+			</div>
 		</div>
 	);
-};
-
-export default Note;
+}

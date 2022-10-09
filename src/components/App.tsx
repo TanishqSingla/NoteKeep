@@ -4,15 +4,15 @@ import Footer from "./Layout/Footer/Footer";
 import Note from "./Note/Note";
 import CreateNote from "./CreateNote/CreateNote";
 
-export interface Notes {
+export type Note = {
 	title: string;
 	content: string;
 }
 
 const App: React.FC = () => {
-	const [notes, setNotes] = useState<Notes[]>([]);
+	const [notes, setNotes] = useState<Note[]>([]);
 
-	const addNote = (newNote: Notes) => {
+	const addNote = (newNote: Note) => {
 		if (newNote.content) {
 			setNotes((prevNotes) => {
 				return [...prevNotes, newNote];
@@ -30,7 +30,9 @@ const App: React.FC = () => {
 	return (
 		<div className="App">
 			<Header />
+			<main style={{flexGrow: 1}}> 
 			<CreateNote onAdd={addNote} />
+			<div className="notesDisplay">
 			{notes.map((note, index) => (
 				<Note
 					key={index}
@@ -40,6 +42,8 @@ const App: React.FC = () => {
 					onDelete={deleteNote}
 				/>
 			))}
+</div>
+			</main>
 			<Footer />
 		</div>
 	);

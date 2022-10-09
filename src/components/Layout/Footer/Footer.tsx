@@ -1,6 +1,8 @@
+import style from './Footer.module.css'
+
 function Footer() {
   return (
-    <footer>
+    <footer className={style.Footer}>
       <div>Made By: Tanishq</div>
       <div className="socials">
         <ul>

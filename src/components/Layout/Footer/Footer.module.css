@@ -1,0 +1,11 @@
+.Footer {
+  justify-self: end;
+  height: 108px;
+  padding: 2rem 1rem;
+  background: #222;
+}
+
+footer p {
+  color: #d3d3d3;
+  height: 2.5rem;
+}

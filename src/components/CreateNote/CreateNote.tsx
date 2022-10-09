@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Notes } from "../App";
+import { Note } from "../App";
 import AddIcon from "@mui/icons-material/Add";
 import style from './CreateNote.module.css'
 
 interface createNoteProps {
-	onAdd: (note: Notes) => void;
+	onAdd: (note: Note) => void;
 }
 
 type onChangeHandler = React.ChangeEvent<
