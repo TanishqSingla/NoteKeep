@@ -1,0 +1,34 @@
+.CreateForm {
+  position: relative;
+  margin: 30px auto 20px auto;
+  padding: 15px;
+  width: 480px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px #8a8989;
+}
+
+.TitleInput{
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1.2em;
+  resize: none;
+  padding: 4px;
+}
+
+.AddNoteButton {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  height: 36px;
+  width: 36px;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  bottom: -18px;
+  right: 18px;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.2rem;
+  background: #222;
+}

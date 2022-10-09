@@ -1,6 +1,8 @@
-import React, { useState } from "react";
-import { Notes } from "./App";
+import { useState } from "react";
+import { Notes } from "../App";
 import AddIcon from "@mui/icons-material/Add";
+import style from './CreateNote.module.css'
+
 interface createNoteProps {
 	onAdd: (note: Notes) => void;
 }
@@ -36,9 +38,10 @@ const CreateNote: React.FC<createNoteProps> = (props) => {
 
 	return (
 		<div>
-			<form>
+			<form className={style.CreateForm}>
 				<input
 					name="title"
+					className={style.TitleInput}
 					type="text"
 					onChange={handleChange}
 					value={note.title}
@@ -46,13 +49,14 @@ const CreateNote: React.FC<createNoteProps> = (props) => {
 				/>
 				<textarea
 					name="content"
+					className={style.TitleInput}
 					value={note.content}
 					placeholder="Take a note..."
 					onChange={handleChange}
 				/>
 				<button
 					onClick={submitNote}
-					style={{ display: "grid", placeItems: "center" }}
+					className={style.AddNoteButton}
 				>
 					<AddIcon />
 				</button>
