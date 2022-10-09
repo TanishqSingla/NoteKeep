@@ -21,7 +21,7 @@
   white-space: pre-wrap;
   flex-grow: 1;
   word-wrap: break-word;
-  margin: 4px 0;
+  margin: 8px 0;
 }
 
 .Footer {
@@ -30,8 +30,15 @@
 }
 
 .Button {
+  cursor: pointer;
   background: white;
   color: red;
   width: 64px;
   border: none;
+}
+
+@media (max-width: 767px) {
+  .Note {
+    width: 80%; 
+  }
 }
