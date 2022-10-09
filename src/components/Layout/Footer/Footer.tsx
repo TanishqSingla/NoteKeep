@@ -1,18 +1,23 @@
-import style from './Footer.module.css'
+import style from "./Footer.module.css";
+import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
 
 function Footer() {
-  return (
-    <footer className={style.Footer}>
-      <div>Made By: Tanishq</div>
-      <div className="socials">
-        <ul>
-          <li>Github: </li>
-          <li>Twitter: </li>
-          <li>LinkedIn</li>
-        </ul>
-      </div>
-    </footer>
-  );
+	return (
+		<footer className={style.Footer}>
+			<div className={style.MadeBy}>Made By: Tanishq</div>
+			<div className={style.Socials}>
+				<a href="">
+					<GitHub />
+				</a>
+				<a href="">
+					<Twitter />
+				</a>
+				<a href="">
+					<LinkedIn />
+				</a>
+			</div>
+		</footer>
+	);
 }
 
 export default Footer;
