@@ -6,13 +6,13 @@ function Footer() {
 		<footer className={style.Footer}>
 			<div className={style.MadeBy}>Made By: Tanishq</div>
 			<div className={style.Socials}>
-				<a href="">
+				<a href="https://github.com/TanishqSingla">
 					<GitHub />
 				</a>
-				<a href="">
+				<a href="https://twitter.com/TanishqSingla_">
 					<Twitter />
 				</a>
-				<a href="">
+				<a href="https://linkedin.com/in/tanishqsingla">
 					<LinkedIn />
 				</a>
 			</div>
