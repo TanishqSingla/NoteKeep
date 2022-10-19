@@ -25,7 +25,8 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "test": "vitest"
+    "test": "vitest",
+    "docker": "docker compose up"
   },
   "eslintConfig": {
     "extends": "react-app"
