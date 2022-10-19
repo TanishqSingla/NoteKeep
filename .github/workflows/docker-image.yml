@@ -9,20 +9,16 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node_version: ['8', '10', '14']
     steps:
     - uses: actions/checkout@v3
-    - name: Use Nodejs ${{ matrix.node_version }}
+    - name: Use Nodejs 14
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node_version }}
+        node-version: 14
       
-    - name: npm install build and test
+    - name: npm install and test
       run: |
         npm install
-        npm run build --if-present
         npm test
     
   build:
