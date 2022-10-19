@@ -7,19 +7,6 @@ on:
     branches: [ "master" ]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Nodejs 14
-      uses: actions/setup-node@v1
-      with:
-        node-version: 14
-      
-    - name: npm install and test
-      run: |
-        npm install
-        npm test
     
   build:
 
