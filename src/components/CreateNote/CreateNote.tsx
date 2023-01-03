@@ -55,6 +55,7 @@ export default function(props: createNoteProps) {
 				/>
 				<button
 					onClick={submitNote}
+					disabled={!!(!note.content.length)}
 					className={style.AddNoteButton}
 					aria-label='addButton'
 				>

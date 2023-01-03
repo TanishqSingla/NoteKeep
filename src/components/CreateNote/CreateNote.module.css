@@ -35,4 +35,10 @@
   cursor: pointer;
   font-size: 1.2rem;
   background: #222;
+  transition: .4s ease-in-out;
+}
+
+.AddNoteButton:disabled {
+  background: grey;
+  cursor: not-allowed;
 }
