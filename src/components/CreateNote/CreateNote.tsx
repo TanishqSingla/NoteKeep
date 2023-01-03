@@ -11,7 +11,7 @@ type onChangeHandler = React.ChangeEvent<
 	HTMLInputElement | HTMLTextAreaElement
 >;
 
-const CreateNote: React.FC<createNoteProps> = (props) => {
+export default function(props: createNoteProps) {
 	const [note, setNote] = useState({
 		title: "",
 		content: "",
@@ -37,7 +37,6 @@ const CreateNote: React.FC<createNoteProps> = (props) => {
 	};
 
 	return (
-		<div>
 			<form className={style.CreateForm}>
 				<input
 					name="title"
@@ -57,12 +56,10 @@ const CreateNote: React.FC<createNoteProps> = (props) => {
 				<button
 					onClick={submitNote}
 					className={style.AddNoteButton}
+					aria-label='addButton'
 				>
 					<AddIcon />
 				</button>
 			</form>
-		</div>
 	);
 };
-
-export default CreateNote;
